@@ -1,0 +1,20 @@
+<table *ngIf="students.length>0" class="table table-bordered table-hover table-stripped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Ops</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteRow(student.id)"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

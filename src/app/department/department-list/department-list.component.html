@@ -1,0 +1,38 @@
+<br>
+<br>
+<table class="table table-bordered table-hover table-stripped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Ops</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dept of departments">
+            <td>{{dept.id}}</td>
+            <td>{{dept.name}}</td>
+            <td>
+                <!-- <div class="crop" [style.width.px]="dept.rating*75/5" [title]="dept.rating">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div> -->
+                <app-star [rating]="dept.rating"></app-star>
+            </td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteRow(dept.id)"> Delete</button>
+                <button class="btn btn-success" (click)="editRow()">Edit</button>
+
+            </td>
+        </tr>
+        <tr *ngIf="flag">
+            <td colspan="4">
+                <app-department-edit (editedDept)="getDataFromChild($event)"></app-department-edit>
+            </td>
+        </tr>
+    </tbody>
+</table>

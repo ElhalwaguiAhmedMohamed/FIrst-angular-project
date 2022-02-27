@@ -1,0 +1,9 @@
+<label>ID</label>
+<input type="text" [(ngModel)]="newStudent.id">
+<label>Name</label>
+<input type="text" [(ngModel)]="newStudent.name">
+<label>Age</label>
+<input type="text" [(ngModel)]="newStudent.age">
+
+<button type="button" class="btn btn-success" (click)="save()">Add</button>
+{{newStudent|json}}
