@@ -8,3 +8,6 @@ div {
 .edit {
   display: inline;
 }
+.editrow {
+  background-color: bisque;
+}
