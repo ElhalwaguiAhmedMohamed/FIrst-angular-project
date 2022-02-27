@@ -1,5 +1,3 @@
-<br>
-<br>
 <table class="table table-bordered table-hover table-stripped">
     <thead>
         <tr>
@@ -30,7 +28,7 @@
             </td>
         </tr>
         <tr *ngIf="flag">
-            <td colspan="4">
+            <td colspan="4" class="editrow">
                 <app-department-edit (editedDept)="getDataFromChild($event)"></app-department-edit>
             </td>
         </tr>
